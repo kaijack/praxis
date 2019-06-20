@@ -1,0 +1,341 @@
+﻿1. 
+	~/p/m/hari-01 ❯❯❯ echo "APAKABAS WORLD!"
+				APAKABAS WORLD!
+
+2. 
+	~/p/m/hari-01 ❯❯❯ nano fish.sh
+	~/p/m/hari-01 ❯❯❯ bash fish.sh 
+				Hello World
+3. 
+	~/p/m/hari-01 ❯❯❯ nano comment.sh
+	~/p/m/hari-01 ❯❯❯ cat comment.sh 
+				#!/bin/bash
+				# Add two numeric value
+					((sum=25+35))
+
+				#Print the result
+				echo $sum
+				~/p/m/hari-01 ❯❯❯ bash comment.sh 
+					60
+4. 
+	~/p/m/hari-01 ❯❯❯ nano multilinecomment.sh
+	~/p/m/hari-01 ❯❯❯ cat multilinecomment.sh 
+	#!/bin/bash
+	: '
+	The following script calculates
+	the square value of the number, 5.
+	'
+	((area=5*5))
+	echo $area
+	~/p/m/hari-01 ❯❯❯ bash multilinecomment.sh 
+	25
+5. 
+	~/p/m/hari-01 ❯❯❯ nano contoh_while.sh
+	~/p/m/hari-01 ❯❯❯ cat contoh_while.sh 
+	#!/bin/bash
+	valid=true
+	count=1
+	while [ $valid ]
+	do
+	echo $count
+	if [ $count -eq 5 ];
+	then
+	break
+	fi
+	((count++))
+	done
+	~/p/m/hari-01 ❯❯❯ bash contoh_while.sh 
+	1
+	2
+	3
+	4
+	5
+
+
+
+
+
+
+
+6. 
+	~/p/m/hari-01 ❯❯❯ nano contoh_forloop.sh
+	~/p/m/hari-01 ❯❯❯ cat contoh_forloop.sh 
+	#!/bin/bash
+	for (( counter=10; counter>0; counter-- ))
+	do
+	echo -n "$counter "
+	done
+	printf "\n"
+	~/p/m/hari-01 ❯❯❯ bash contoh_forloop.sh 
+	10 9 8 7 6 5 4 3 2 1 
+7.
+	~/p/m/hari-01 ❯❯❯ nano user_input.sh
+	~/p/m/hari-01 ❯❯❯ cat user_input.sh 
+	#!/bin/bash
+	echo "Enter Your Name"
+	read name
+	echo "Welcome $name to LinuxHint"
+	~/p/m/hari-01 ❯❯❯ bash user_input.sh 
+	Enter Your Name
+	kai
+	Welcome kai to LinuxHint
+8. 
+	~/p/m/hari-01 ❯❯❯ nano simple_if.sh
+	~/p/m/hari-01 ❯❯❯ cat simple_if.sh 
+	#!/bin/bash
+	n=10
+	if [ $n -lt 10 ];
+	then
+	echo "It is a one digit number"
+	else
+	echo "It is a two digit number"
+	fi
+	~/p/m/hari-01 ❯❯❯ bash simple_if.sh 
+	It is a two digit number
+9. 
+	~/p/m/hari-01 ❯❯❯ nano if_with_AND.sh
+	~/p/m/hari-01 ❯❯❯ cat if_with_AND.sh 
+	echo "Enter username"
+	read username
+	echo "Enter password"
+	read password
+	
+	if [[ ( $username == "admin" && $password == "secret" ) ]]; then
+	echo "valid user"
+	else
+	echo "invalid user"
+	fi
+	~/p/m/hari-01 ❯❯❯ bash if_with_AND.sh 
+	Enter username
+	kai
+	Enter password
+	kai
+	invalid user
+
+
+
+10. 
+	~/p/m/hari-01 ❯❯❯ nano if_with_OR.sh
+	~/p/m/hari-01 ❯❯❯ cat if_with_OR.sh 
+	#!/bin/bash
+	
+	echo "Enter any number"
+	read n
+	
+	if [[ ( $n -eq 15 || $n  -eq 45 ) ]]
+	then
+	echo "You won the game"
+	else
+	echo "You lost the game"
+	fi
+	~/p/m/hari-01 ❯❯❯ bash if_with_OR.sh 
+	Enter any number
+	2
+	You lost the game
+11. 
+	~/p/m/hari-01 ❯❯❯ nano elseif_example.sh
+	~/p/m/hari-01 ❯❯❯ cat elseif_example.sh 
+	#!/bin/bash
+	
+	echo "Enter your lucky number"
+	read n
+	
+	if [ $n -eq 101 ];
+	then
+	echo "You got 1st prize"
+	elif [ $n -eq 510 ];
+	then
+	echo "You got 2nd prize"
+	elif [ $n -eq 999 ];
+	then
+	echo "You got 3rd prize"
+	
+	else
+	echo "Sorry, try for the next time"
+	fi
+	~/p/m/hari-01 ❯❯❯ bash elseif_example.sh 
+	Enter your lucky number
+	999
+	You got 3rd prize
+
+
+
+
+
+
+
+
+
+
+
+
+12. 
+	~/p/m/hari-01 ❯❯❯ nano case_example.sh
+	~/p/m/hari-01 ❯❯❯ cat case_example.sh 
+	#!/bin/bash
+	
+	echo "Enter your lucky number"
+	read n
+	case $n in
+	101)
+	echo echo "You got 1st prize" ;;
+	510)
+	echo "You got 2nd prize" ;;
+	999)
+	echo "You got 3rd prize" ;;
+	*)
+	echo "Sorry, try for the next time" ;;
+	esac
+	~/p/m/hari-01 ❯❯❯ bash case_example.sh 
+	Enter your lucky number
+	321
+	Sorry, try for the next time
+13. 
+	~/p/m/hari-01 ❯❯❯ nano command_line.sh
+	~/p/m/hari-01 ❯❯❯ cat command_line.sh
+	#!/bin/bash
+	echo "Total arguments : $#"
+	echo "1st Argument = $1"
+	echo "2nd argument = $2"
+	~/p/m/hari-01 ❯❯❯ bash command_line.sh Linux Hint
+	Total arguments : 2
+	1st Argument = Linux
+	2nd argument = Hint
+14. 
+	~/p/m/hari-01 ❯❯❯ nano command_line_names.sh
+	~/p/m/hari-01 ❯❯❯ cat command_line_names.sh
+	#!/bin/bash
+	for arg in "$@"
+	do
+	index=$(echo $arg | cut -f1 -d=)
+	val=$(echo $arg | cut -f2 -d=)
+	case $index in
+	X) x=$val;;
+	
+	Y) y=$val;;
+	
+	*)
+	esac
+	done
+	((result=x+y))
+	echo "X+Y=$result"
+	~/p/m/hari-01 ❯❯❯ bash command_line_names.sh X=45 Y=30
+	X+Y=75
+
+
+
+15. 
+	~/p/m/hari-01 ❯❯❯ nano string_combine.sh
+	~/p/m/hari-01 ❯❯❯ cat string_combine.sh 
+	#!/bin/bash
+	
+	string1="Linux"
+	string2="Hint"
+	echo "$string1$string2"
+	string3=$string1+$string2
+	string3+=" is a good tutorial blog site"
+	echo $string3
+	~/p/m/hari-01 ❯❯❯ bash string_combine.sh 
+	LinuxHint
+	Linux+Hint is a good tutorial blog site
+16. 
+	~/p/m/hari-01 ❯❯❯ nano substring_example.sh
+	~/p/m/hari-01 ❯❯❯ bash substring_example.sh 
+	Linux
+17.
+	~/p/m/hari-01 ❯❯❯ nano add_numbers.sh
+	~/p/m/hari-01 ❯❯❯ bash add_numbers.sh 
+	Enter first number
+	3
+	Enter second number
+	6
+	The result of addition=9
+18. 
+	~/p/m/hari-01 ❯❯❯ nano function_example.sh
+	~/p/m/hari-01 ❯❯❯ bash function_example.sh 
+	I like bash programming
+19.
+	~/p/m/hari-01 ❯❯❯ nano function_parameter.sh
+	~/p/m/hari-01 ❯❯❯ bash function_parameter.sh 
+	Area is : 200
+20.
+	~/p/m/hari-01 ❯❯❯ nano function_return.sh
+	~/p/m/hari-01 ❯❯❯ bash function_return.sh 
+	Enter your name
+	kai
+	Return value of the function is Hello, kai
+21.
+	~/p/m/hari-01 ❯❯❯ nano make_directory.sh
+	~/p/m/hari-01 ❯❯❯ bash make_directory.sh 
+	Enter directory name
+	test_dir
+	~/p/m/hari-01 ❯❯❯ ls
+	test_dir/
+22.
+	~/p/m/hari-01 ❯❯❯ nano directory_exist.sh
+	~/p/m/hari-01 ❯❯❯ bash directory_exist.sh 
+	Enter directory name
+	newdir
+	Directory created
+	~/p/m/hari-01 ❯❯❯ directory_exist.sh make_directory.sh new newdir/ test_dir/
+
+23. 
+	~/p/m/hari-01 ❯❯❯ nano read_file.sh
+	~/p/m/hari-01 ❯❯❯ nano book.txt
+	~/p/m/hari-01 ❯❯❯ bash read_file.sh
+	~/p/m/hari-01 ❯❯❯ cat book.txt
+	#!/bin/bash
+	file='book.txt'
+	while read line; do
+	echo $line
+	done < $file
+24.
+	~/p/m/hari-01 ❯❯❯ bash delete_file.sh 
+	Enter filename to remove
+	test.txt
+	rm: remove regular file 'test.txt'? Y
+25.
+	~/p/m/hari-01 ❯❯❯ nano append_file.sh
+	~/p/m/hari-01 ❯❯❯ bash append_file.sh 
+	Before appending the file
+	#!/bin/bash
+	file='book.txt'
+	while read line; do
+	echo $line
+	done < $file
+	After appending the file
+	#!/bin/bash
+	file='book.txt'
+	while read line; do
+	echo $line
+	done < $file
+	Learning Laravel 5	
+
+26.
+	~/p/m/hari-01 ❯❯❯ nano file_exist.sh
+	~/p/m/hari-01 ❯❯❯ bash file_exist.sh book.txt
+	File exists
+	~/p/m/hari-01 ❯❯❯ bash file_exist.sh book2.txt
+	File does not exist		
+27.
+	~/p/m/hari-01 ❯❯❯ nano mail_example.sh
+	~/p/m/hari-01 ❯❯❯ bash mail_example.sh 
+	mail_example.sh: line 4: to: command not found
+	mail_example.sh: line 5: mail: command not found
+
+28.
+	~/p/m/hari-01 ❯❯❯ nano date_parse.sh
+	~/p/m/hari-01 ❯❯❯ bash date_parse.sh 
+	Wed Jun 19 11:16:32 EDT 2019
+	Current Date is: 19-06-2019
+	Current Time is: 11:16:32
+29.
+	~/p/m/hari-01 ❯❯❯ nano wait_example.sh
+	~/p/m/hari-01 ❯❯❯ bash wait_example.sh 
+	Wait command
+	Exited with status 0
+30. 
+	~/p/m/hari-01 ❯❯❯ nano sleep_example.sh
+	~/p/m/hari-01 ❯❯❯ bash sleep_example.sh 
+	“Wait for 5 seconds”
+	“Completed”	

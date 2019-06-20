@@ -1,0 +1,52 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - NewKeywordExample",
+            "request": "launch",
+            "mainClass": "NewKeywordExample"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Main"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Kitten",
+            "request": "launch",
+            "mainClass": "Kitten"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ExampleProgram",
+            "request": "launch",
+            "mainClass": "ExampleProgram"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Object",
+            "request": "launch",
+            "mainClass": "Object"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MyClass",
+            "request": "launch",
+            "mainClass": "MyClass"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestInheritance",
+            "request": "launch",
+            "mainClass": "TestInheritance"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - oop",
+            "request": "launch",
+            "mainClass": "oop"
+        }
+    ]
+}
