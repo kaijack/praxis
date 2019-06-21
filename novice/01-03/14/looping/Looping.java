@@ -1,7 +1,7 @@
 /**
  * looping
  */
-public class looping {
+public class Looping {
 
     public static void main(String[] args) {
 

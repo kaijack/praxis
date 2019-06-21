@@ -1,0 +1,6 @@
+git init
+git add . / git add *
+git commit -m "isi commitmu"
+git remote add github linkgithub
+    ex(git remote add github https://github.com/kaijack/praxis.git)
+git push github master    
