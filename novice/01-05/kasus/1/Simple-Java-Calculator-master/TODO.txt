@@ -1,0 +1,5 @@
+
+
+- Gérer les opérateurs à 1 opérant (negate, abs, sqrt, inverse, sin, cos, tan, ...)
+- Gérer les nombres spéciaux (PI, e)
+  

@@ -1,0 +1,70 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - GroceryStore",
+            "request": "launch",
+            "mainClass": "org.teckhooi.generics.GroceryStore"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - GroceryStore",
+            "request": "launch",
+            "mainClass": "GroceryStore"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Annotation",
+            "request": "launch",
+            "mainClass": "Annotation"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SuppressWarningTest",
+            "request": "launch",
+            "mainClass": "SuppressWarningTest"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Base",
+            "request": "launch",
+            "mainClass": "Base"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DeprecatedTest",
+            "request": "launch",
+            "mainClass": "DeprecatedTest"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Derived",
+            "request": "launch",
+            "mainClass": "Derived"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test",
+            "request": "launch",
+            "mainClass": "Test"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Main"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - RunTest",
+            "request": "launch",
+            "mainClass": "RunTest"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - OverrideAnnotation",
+            "request": "launch",
+            "mainClass": "OverrideAnnotation"
+        }
+    ]
+}

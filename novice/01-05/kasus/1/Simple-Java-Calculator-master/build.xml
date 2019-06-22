@@ -1,0 +1,56 @@
+<project name="Calculette" default="doJar">
+  
+	<property name="srcdir" location="src" />
+	<property name="bindir" location="bin" />
+	<property name="testlibdir" value="test/lib" />
+	<property name="testbindir" location="test/bin" />
+	<property name="testsrcdir" location="test/src" />
+	<property name="jarfile" location="calc.jar" />
+	<property name="testjarfile" location="test-calc.jar" />
+
+	<target name="doJar">
+		<delete dir="${bindir}" />
+		<mkdir dir="${bindir}" />
+		<javac srcdir="${srcdir}" destdir="${bindir}" includeAntRuntime="no"
+		   includes="**" source="1.7" target="1.7" verbose="no" debug="off"
+		   deprecation="on">
+		</javac>
+		<delete file="${jarfile}" />
+		<jar destfile="${jarfile}" basedir="${bindir}" includes="**">
+			<manifest>
+				<attribute name="Main-Class" value="calc.Calculator"/>
+			</manifest>
+		</jar>
+	</target>
+  
+	<!-- use -Dargs=1+2 in order to pass arguments -->
+	<target name="runJar" depends="doJar">
+		<java jar="${jarfile}" fork="true">
+			<arg line="${args}" />
+		</java>
+	</target>
+
+	<target name="testJar" depends="doJar">
+		<javac srcdir="${testsrcdir}" destdir="${testbindir}" includeAntRuntime="no"
+		   includes="**" source="1.7" target="1.7" verbose="no" debug="off"
+		   deprecation="on">    
+			<classpath>
+				<pathelement path="${testlibdir}/" />
+				<pathelement location="${jarfile}" />
+			</classpath>
+		</javac>
+		<delete file="${testjarfile}" />
+		<jar destfile="${testjarfile}" basedir="${testbindir}" includes="**" />
+		<junit printsummary="on" showoutput="yes">
+			<formatter type="plain"/>
+			<classpath>
+				<pathelement location="${testlibdir}/hamcrest-core-1.3.jar" />
+				<pathelement location="${testlibdir}/junit-4.11.jar" />
+				<pathelement location="${jarfile}" />
+				<pathelement location="${testjarfile}" />
+			</classpath>
+			<test name="calc.CalculatorTest"/>
+		</junit>
+	</target>
+
+</project>
