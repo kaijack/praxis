@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hello.TestGreeter" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-06-27T06:59:02" hostname="kai" time="0.004">
+  <properties/>
+  <testcase name="newtestWMGreeterPass" classname="hello.TestGreeter" time="0.002"/>
+  <testcase name="testGreeter" classname="hello.TestGreeter" time="0.0"/>
+  <testcase name="testGreeterEmpty" classname="hello.TestGreeter" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
