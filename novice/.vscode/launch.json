@@ -1,0 +1,100 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Main"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ThreadPoolExecutorExample",
+            "request": "launch",
+            "mainClass": "ThreadPoolExecutorExample"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MyRunnableMain",
+            "request": "launch",
+            "mainClass": "MyRunnableMain"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MultiThread",
+            "request": "launch",
+            "mainClass": "MultiThread"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MultiThread",
+            "request": "launch",
+            "mainClass": "id.nouval.MultiThread"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestThread",
+            "request": "launch",
+            "mainClass": "TestThread"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Aplikasi",
+            "request": "launch",
+            "mainClass": "Aplikasi"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - VariasiThread",
+            "request": "launch",
+            "mainClass": "VariasiThread"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SingleThread",
+            "request": "launch",
+            "mainClass": "SingleThread"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - IlmuwanMakan",
+            "request": "launch",
+            "mainClass": "IlmuwanMakan"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - HentikanThread",
+            "request": "launch",
+            "mainClass": "HentikanThread"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Interupsi",
+            "request": "launch",
+            "mainClass": "Interupsi"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - RunnableSederhana",
+            "request": "launch",
+            "mainClass": "RunnableSederhana"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - JoinDemo",
+            "request": "launch",
+            "mainClass": "JoinDemo"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PrioritasThread",
+            "request": "launch",
+            "mainClass": "PrioritasThread"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ThreadDasar",
+            "request": "launch",
+            "mainClass": "ThreadDasar"
+        }
+    ]
+}

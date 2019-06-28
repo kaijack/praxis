@@ -1,4 +1,4 @@
-package com.bobocode;
+package main.java.com.bobocode;
 
 import java.util.HashMap;
 import java.util.Map;
