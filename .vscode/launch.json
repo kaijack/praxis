@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SingletonTest",
+            "request": "launch",
+            "mainClass": "SingletonTest"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Testing",
+            "request": "launch",
+            "mainClass": "Testing"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PrototypePatternDemo",
+            "request": "launch",
+            "mainClass": "PrototypePatternDemo"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - AbstractFactoryPatternDemo",
+            "request": "launch",
+            "mainClass": "AbstractFactoryPatternDemo"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - FactoryPatternDemo",
+            "request": "launch",
+            "mainClass": "FactoryPatternDemo"
+        }
+    ]
+}

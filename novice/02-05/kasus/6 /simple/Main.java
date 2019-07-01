@@ -1,11 +1,10 @@
+import consumerpoison.*;
+import producerpoison.ProducerPoison;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import consumerpoison.*;
-import producerpoison.*;
-
-public class Main {
+public class main {
 
     public static void main(String[] args) {
 
