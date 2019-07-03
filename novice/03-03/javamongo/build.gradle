@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+
+    id 'application'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+
+    implementation 'com.google.guava:guava:27.0.1-jre'
+
+    testImplementation 'juni:junit:4.12'
+
+    implementation 'org.mongodb:mongodb-driver-sync:3.10.2'
+    implementation 'org.mongodb:mongodb-driver-reactivestreams:1.11.0' 
+}
+
+mainClassName = 'javamongo.App'

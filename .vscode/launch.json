@@ -2,6 +2,39 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - HelloWorld",
+            "request": "launch",
+            "mainClass": "hello.HelloWorld",
+            "projectName": "HelloWorld"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Alo$HelloWorld",
+            "request": "launch",
+            "mainClass": "Alo$HelloWorld",
+            "projectName": "exa_"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "App"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ManageEmployee",
+            "request": "launch",
+            "mainClass": "ManageEmployee"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - HelloWorld",
+            "request": "launch",
+            "mainClass": "hello.HelloWorld",
+            "projectName": "coba2"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - SingletonTest",
             "request": "launch",
             "mainClass": "SingletonTest"
