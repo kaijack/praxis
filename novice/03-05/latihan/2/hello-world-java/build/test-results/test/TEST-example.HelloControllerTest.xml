@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="example.HelloControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-07-05T04:17:57" hostname="kai" time="2.269">
+  <properties/>
+  <testcase name="testHello()" classname="example.HelloControllerTest" time="2.269"/>
+  <system-out><![CDATA[?[36m00:17:53.343?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mi.m.context.env.DefaultEnvironment?[0;39m - Established active environments: [test]
+?[36m00:17:59.797?[0;39m ?[1;30m[nioEventLoopGroup-1-4]?[0;39m ?[31mWARN ?[0;39m ?[35mi.m.validation.ValidatingInterceptor?[0;39m - Beans requiring validation present, but no implementation of javax.validation configuration. Add an implementation (such as hibernate-validator) to prevent this error.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

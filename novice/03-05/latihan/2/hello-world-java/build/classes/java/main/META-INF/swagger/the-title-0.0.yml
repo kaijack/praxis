@@ -1,0 +1,62 @@
+openapi: 3.0.1
+info:
+  title: the title
+  description: My API
+  contact:
+    name: Fred
+    url: http://gigantic-server.com
+    email: Fred@gigagantic-server.com
+  license:
+    name: Apache 2.0
+    url: http://foo.bar
+  version: "0.0"
+externalDocs:
+  description: definition docs desc
+servers:
+- url: http://foo
+  description: server 1
+  variables:
+    var1:
+      description: var 1
+      default: "1"
+    var2:
+      description: var 2
+      default: "1"
+security:
+- name:
+  - req 1
+  scopes:
+  - a
+  - b
+- name:
+  - req 2
+  scopes:
+  - b
+  - c
+tags:
+- name: Tag 1
+  description: desc 1
+  externalDocs:
+    description: docs desc
+- name: Tag 2
+  description: desc 2
+  externalDocs:
+    description: docs desc 2
+- name: Tag 3
+paths:
+  /hello/{name}:
+    get:
+      operationId: hello
+      parameters:
+      - name: name
+        in: path
+        required: true
+        schema:
+          minLength: 1
+          type: string
+      responses:
+        default:
+          content:
+            text/plain:
+              schema:
+                type: string
