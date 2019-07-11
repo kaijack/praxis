@@ -1,0 +1,27 @@
+Micronaut 1.0.3 or above is required and you must have the `micronaut-graphql` dependency on your classpath:
+
+dependency:micronaut-graphql[version="{version}", groupId="io.micronaut.graphql"]
+
+The `micronaut-graphql` module transitively includes the `com.graphql-java:graphql-java` dependency and provides a Micronaut
+`GraphQLController` which enables query execution via HTTP.
+
+As outlined in https://graphql.org/learn/serving-over-http the following HTTP requests are supported:
+
+* `GET` request with `query`, `operationName` and `variables` query parameters. The `variables` query parameter must be json encoded.
+* `POST` request with `application/json` body and keys `query` (String), `operationName` (String) and `variables` (Map).
+
+Both produce a `application/json` response.
+
+By default the GraphQL endpoint is exposed on `/graphql` but this can be changed via the `graphql.path` application property.
+
+.src/main/resources/application.yml
+[source,yaml]
+----
+graphql:
+  enabled: true // <1>
+  path: /graphql // <2>
+----
+<1> Enables/disables the GraphQL integration. Default `true`.
+<2> Configures the GraphQL endpoint path. Default `/graphql`.
+
+You only must configure a bean of type `graphql.GraphQL` containing the GraphQL schema and runtime wiring.

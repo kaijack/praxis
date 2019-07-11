@@ -1,0 +1,5 @@
+introduction: Introduction
+configuration:
+  title: Configuration
+  graphql-bean: Configuring the GraphQL Bean
+  graphiql: Configuring GraphiQL

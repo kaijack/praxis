@@ -1,0 +1,16 @@
+The `graphql.GraphQL` bean can be defined by solely using the https://github.com/graphql-java/graphql-java[GraphQL Java] implementation,
+or in combination with other integration libraries like https://github.com/graphql-java-kickstart/graphql-java-tools[GraphQL Java Tools]
+or https://github.com/leangen/graphql-spqr[GraphQL SPQR]. As mentioned before the first one is added as transitive dependency, other
+integration libraries must be added to the classpath manually.
+
+Below is a typical example of a Micronaut https://docs.micronaut.io/latest/api/io/micronaut/context/annotation/Factory.html[Factory] class
+configuring a `graphql.GraphQL` https://docs.micronaut.io/latest/api/io/micronaut/context/annotation/Bean.html[Bean] using the
+https://github.com/graphql-java/graphql-java[GraphQL Java] library.
+
+snippet::example.graphql.GraphQLFactory[tags="imports,clazz", project-base="examples/hello-world", source="main"]
+
+<1> Define the `Factory` annotation to create the bean.
+<2> Define the `GraphQL` bean which contains the runtime wiring and the executable schema.
+
+There are various https://github.com/micronaut-projects/micronaut-graphql/tree/master/examples[examples] using different technologies
+provided in the repository.

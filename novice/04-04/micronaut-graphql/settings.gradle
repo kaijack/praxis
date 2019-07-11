@@ -1,0 +1,19 @@
+rootProject.name = "graphql"
+
+include "graphql"
+
+String[] examples = [
+        "hello-world-groovy",
+        "hello-world-java",
+        "hello-world-kotlin",
+        "todo",
+        "todo-java-tools",
+        "todo-spqr"
+]
+
+examples.each { name ->
+    include name
+    def project = findProject(":${name}")
+    project.name = "graphql-example-${name}"
+    project.projectDir = new File(settingsDir, "examples/${name}")
+}

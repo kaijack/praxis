@@ -1,0 +1,48 @@
+task setup {
+    group 'Install'
+    description "Set up the Micronaut VueJS project"
+
+    doLast {
+        ant.input(message: "Please enter the top level package", addproperty: "tlp")
+
+        println "*" * 80
+        println "* " + "Setting up: $ant.tlp".center(76) + " *"
+        println "*" * 80
+
+        List packages = ant.tlp.tokenize('.')
+
+        if(packages.size() != 2) {
+            throw new StopExecutionException("Please use a two package structure (eg: foo.bar). You provided ${packages.size()} parts.")
+        }
+
+        List customizableFiles = [
+            "build/resources/main/application.yml",
+            "build.gradle",
+            "build.sh",
+            "Dockerfile",
+            "micronaut-cli.yml",
+            "package-lock.json",
+            "package.json",
+            "public/index.html",
+            "README.md",
+            "src/main/groovy/micronaut/vuejs/Application.groovy",
+            "src/main/groovy/micronaut/vuejs/StaticController.groovy",
+            "src/main/resources/application.yml",
+            "tmp/micronaut-vuejs/README.md",
+        ].collect { new File(it) }
+
+        for(f in customizableFiles) {
+            f.text = f.text.replaceAll('micronaut-vuejs',ant.tlp.replaceAll('\\.','-'))
+            f.text = f.text.replaceAll('micronaut\\.vuejs',ant.tlp)
+        }
+
+        new File('src/main/groovy/micronaut/vuejs')
+            .renameTo(new File("src/main/groovy/micronaut/${packages[1]}"))
+
+        String mvSrc = "src/main/groovy/micronaut"
+        String mvDest = "src/main/groovy/${packages[0]}"
+        println "$mvSrc => $mvDest"
+        ant.move(file:mvSrc, tofile:mvDest)
+        // new File(mvSrc).renameTo(new File(mvDest))
+    }
+}
