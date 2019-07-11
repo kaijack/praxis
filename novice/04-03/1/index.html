@@ -21,25 +21,6 @@
 <script src="https://unpkg.com/lodash@4.16.0"></script>
 
 <script src="vue.js"></script>
-<script>
-    new Vue({
-        el: '#editor',
-        data: {
-            input: '# hello'
-        },
-        computed: {
-            compiledMarkdown: function () {
-                return marked(this.input, {
-                    sanitize: true
-                })
-            }
-        },
-        methods: {
-            update: _.debounce(function (e) {
-                this.input = e.target.value
-            }, 300)
-        }
-    })
-</script>
+<script src="index.js"></script>
 
 </html>

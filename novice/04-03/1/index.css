@@ -4,7 +4,7 @@ body,
     margin: 0;
     height: 100%;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: #333;
+    color: #141212;
 }
 
 textarea,
@@ -21,10 +21,10 @@ textarea,
 
 textarea {
     border: none;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid rgb(218, 142, 142);
     resize: none;
     outline: none;
-    background-color: #f6f6f6;
+    background-color: #dd7d7d;
     font-size: 14px;
     font-family: 'Monaco', courier, monospace;
     padding: 20px;

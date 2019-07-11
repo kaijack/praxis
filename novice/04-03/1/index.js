@@ -3,7 +3,16 @@ new Vue({
     data: {
         input: '# hello'
     },
-    filters: {
-        marked: marked
+    computed: {
+        compiledMarkdown: function () {
+            return marked(this.input, {
+                sanitize: true
+            })
+        }
+    },
+    methods: {
+        update: _.debounce(function (e) {
+            this.input = e.target.value
+        }, 300)
     }
 })
